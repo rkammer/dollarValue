@@ -1,0 +1,40 @@
+{
+    "manifest_version": 2,
+    "name"             : "Binance Dollar Amount",
+    "short_name"       : "USD Amount",
+    "description"      : "Adds an extra column on Binance's Deposit/Withdraw Page to display the dollar amount of a crypto currency",
+    "version"          : "0.01",
+    "author"           : "Bright Octopus",
+    "icons": {
+        "16"  : "img/icon16.png",
+        "24"  : "img/icon24.png",
+        "32"  : "img/icon32.png",
+        "48"  : "img/icon48.png",
+        "64"  : "img/icon64.png",
+        "128" : "img/icon128.png",
+        "256" : "img/icon256.png"
+    },
+    "browser_action": {
+        "default_icon": {
+            "16"  : "img/icon16.png",
+            "24"  : "img/icon24.png",
+            "32"  : "img/icon32.png",
+            "48"  : "img/icon48.png",
+            "64"  : "img/icon64.png",
+            "128" : "img/icon128.png",
+            "256" : "img/icon256.png"
+        },
+        "default_popup": "popup/main.html"
+    },
+    "offline_enabled" : false,
+    "content_scripts": [
+        {
+            "js"      : [ "main/content.js" ],
+            "matches" : [
+                "*://www.binance.com/userCenter/depositWithdraw*",
+                "*://binance.com/userCenter/depositWithdraw*"
+            ],
+            "run_at"  : "document_start"
+        }
+    ]
+}
