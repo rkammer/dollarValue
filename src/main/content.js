@@ -4,7 +4,7 @@
 const runTasks = function(){
     setTimeout(function(){
         let BtcAmount    = document.querySelectorAll('li.total strong')[0].innerHTML.slice(0, -4);
-        let DollarAmount = document.querySelectorAll('li.total strong')[1].innerHTML.slice(1);
+        let DollarAmount = document.querySelectorAll('li.total strong')[1].innerHTML.slice(1).replace(/\,/g,'');
         let BtcValue     = DollarAmount / BtcAmount;
 
         const style = document.createElement('style');

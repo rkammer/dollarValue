@@ -3,7 +3,7 @@
     "name"             : "Binance Dollar Amount",
     "short_name"       : "USD Amount",
     "description"      : "Adds an extra column on Binance's Deposit/Withdraw Page to display the dollar amount of a crypto currency",
-    "version"          : "0.01",
+    "version"          : "0.02",
     "author"           : "Bright Octopus",
     "icons": {
         "16"  : "img/icon16.png",
